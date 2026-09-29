@@ -112,8 +112,8 @@ const BookingForm = ({ onSubmit, isLoading = false, room, hotel }) => {
             <span className="room-badge badge-available">Selected Room</span>
           </div>
           <p className="summary-hotel">🏨 <strong>{hotel.name}</strong> ({hotel.location})</p>
-          <p className="summary-room">🛏️ {room.type} • Room #{room.roomNumber}</p>
-          <p className="summary-rate">Price: ₹{room.price} / night (Max capacity: {room.capacity} guests)</p>
+          <p className="summary-room">🛏️ {room.roomType || room.type} • Room #{room.roomNumber}</p>
+          <p className="summary-rate">Price: ₹{room.price} / night (Max capacity: {room.capacity || 2} guests)</p>
         </div>
       )}
 

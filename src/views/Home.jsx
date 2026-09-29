@@ -65,12 +65,14 @@ const Home = () => {
         ? hotel.location.toLowerCase() === selectedLocation.toLowerCase()
         : true;
 
+      const hotelPrice = hotel.price ?? hotel.pricePerNight ?? 0;
+
       const matchesMinPrice = minPrice
-        ? hotel.pricePerNight >= Number(minPrice)
+        ? hotelPrice >= Number(minPrice)
         : true;
 
       const matchesMaxPrice = maxPrice
-        ? hotel.pricePerNight <= Number(maxPrice)
+        ? hotelPrice <= Number(maxPrice)
         : true;
 
       const matchesRating = minRating
@@ -86,8 +88,10 @@ const Home = () => {
       );
     })
     .sort((a, b) => {
-      if (selectedSort === 'price-asc') return a.pricePerNight - b.pricePerNight;
-      if (selectedSort === 'price-desc') return b.pricePerNight - a.pricePerNight;
+      const priceA = a.price ?? a.pricePerNight ?? 0;
+      const priceB = b.price ?? b.pricePerNight ?? 0;
+      if (selectedSort === 'price-asc') return priceA - priceB;
+      if (selectedSort === 'price-desc') return priceB - priceA;
       if (selectedSort === 'rating-desc') return b.rating - a.rating;
       return 0;
     });

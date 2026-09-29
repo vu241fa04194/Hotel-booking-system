@@ -84,6 +84,704 @@
         "Buffet Breakfast",
         "EV Charging"
       ]
+    },
+    {
+      "id": "6",
+      "name": "Taj Falaknuma Grand",
+      "location": "Hyderabad",
+      "rating": 4.9,
+      "price": 6800,
+      "pricePerNight": 6800,
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+      "description": "Perched high above the historic city of pearls, offering royal Nizam hospitality, grand chandeliers, and palatial gardens.",
+      "amenities": [
+        "Free WiFi",
+        "Royal Dining",
+        "Heritage Spa",
+        "Infinity Pool",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "The Imperial Heritage",
+      "location": "Delhi",
+      "rating": 4.8,
+      "price": 5500,
+      "pricePerNight": 5500,
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
+      "description": "An iconic luxury landmark in the heart of Delhi, blending Victorian elegance and art deco style with world-class hospitality.",
+      "amenities": [
+        "Free WiFi",
+        "Swimming Pool",
+        "Art Gallery",
+        "Multi-Cuisine Dining",
+        "Fitness Center"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "The Grand Capital Regency",
+      "location": "New Delhi",
+      "rating": 4.7,
+      "price": 4900,
+      "pricePerNight": 4900,
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+      "description": "Situated near Connaught Place and diplomatic enclaves, featuring contemporary luxury suites and lush landscaped gardens.",
+      "amenities": [
+        "High-Speed WiFi",
+        "Spa & Wellness",
+        "Swimming Pool",
+        "Airport Shuttle",
+        "Cocktail Lounge"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Silicon Oasis Luxury Hotel",
+      "location": "Bangalore",
+      "rating": 4.6,
+      "price": 4200,
+      "pricePerNight": 4200,
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      "description": "A green urban oasis in the tech capital, boasting rooftop infinity pool, wellness retreats, and gourmet farm-to-table dining.",
+      "amenities": [
+        "Free WiFi",
+        "Rooftop Pool",
+        "Fitness Club",
+        "EV Charging",
+        "Business Center"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Marina Bay Grand Hotel",
+      "location": "Chennai",
+      "rating": 4.6,
+      "price": 3800,
+      "pricePerNight": 3800,
+      "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
+      "description": "Coastal luxury hotel overlooking the Bay of Bengal, offering traditional Carnatic aesthetics and premium seaside dining.",
+      "amenities": [
+        "Free WiFi",
+        "Sea View",
+        "Swimming Pool",
+        "Coastal Seafood Restaurant",
+        "Conference Rooms"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "The Grand Victorian Kolkata",
+      "location": "Kolkata",
+      "rating": 4.7,
+      "price": 4100,
+      "pricePerNight": 4100,
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+      "description": "Classic colonial grandeur nestled in central Kolkata with timeless architecture, vintage tea rooms, and opulent ballrooms.",
+      "amenities": [
+        "Free WiFi",
+        "Colonial Tea Lounge",
+        "Swimming Pool",
+        "Spa & Salon",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Koregaon Park Boutique Hotel",
+      "location": "Pune",
+      "rating": 4.5,
+      "price": 3400,
+      "pricePerNight": 3400,
+      "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+      "description": "Chic contemporary hotel in leafy Koregaon Park with vibrant cafes, heated indoor pool, and cozy lounge spaces.",
+      "amenities": [
+        "Free WiFi",
+        "Indoor Pool",
+        "Artisan Cafe",
+        "Fitness Studio",
+        "Free Parking"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Lake Pichola Palace Hotel",
+      "location": "Udaipur",
+      "rating": 4.9,
+      "price": 7200,
+      "pricePerNight": 7200,
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+      "description": "Magical waterfront heritage palace overlooking Lake Pichola with private boat jetty, jharokha balconies, and candlelit dinners.",
+      "amenities": [
+        "Free WiFi",
+        "Lake View",
+        "Heritage Boat Rides",
+        "Rooftop Restaurant",
+        "Ayurvedic Spa"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Sun City Desert Haveli",
+      "location": "Jodhpur",
+      "rating": 4.6,
+      "price": 3600,
+      "pricePerNight": 3600,
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80",
+      "description": "Authentic golden-stone haveli with sweeping vistas of the majestic Mehrangarh Fort, rooftop terrace, and Rajasthani feasts.",
+      "amenities": [
+        "Free WiFi",
+        "Fort View",
+        "Rooftop Dining",
+        "Cultural Music",
+        "Airport Transfer"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Taj View Luxury Gateway",
+      "location": "Agra",
+      "rating": 4.7,
+      "price": 4400,
+      "pricePerNight": 4400,
+      "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=80",
+      "description": "Unobstructed views of the Taj Mahal from your private balcony, set within tranquil gardens with infinity pool.",
+      "amenities": [
+        "Free WiFi",
+        "Taj View Terrace",
+        "Swimming Pool",
+        "Mughlai Dining",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Ganges Heritage Riverfront",
+      "location": "Varanasi",
+      "rating": 4.8,
+      "price": 3900,
+      "pricePerNight": 3900,
+      "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+      "description": "Serene riverside retreat situated beside ancient ghats, offering morning sunrise boat rides and spiritual yoga retreats.",
+      "amenities": [
+        "Free WiFi",
+        "Riverfront Terrace",
+        "Morning Yoga",
+        "Vegetarian Dining",
+        "Boat Excursions"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Fort Kochi Colonial Manor",
+      "location": "Kochi",
+      "rating": 4.7,
+      "price": 3700,
+      "pricePerNight": 3700,
+      "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80",
+      "description": "Portuguese-Dutch heritage manor steps away from historic Chinese fishing nets, spice bazaars, and scenic backwaters.",
+      "amenities": [
+        "Free WiFi",
+        "Backwater Views",
+        "Ayurvedic Spa",
+        "Seafood Grill",
+        "Bicycle Rentals"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Royal Palace View Hotel",
+      "location": "Mysore",
+      "rating": 4.5,
+      "price": 2900,
+      "pricePerNight": 2900,
+      "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=800&q=80",
+      "description": "Charming royal retreat located minutes from Mysore Palace, offering sandalwood spa therapies and South Indian delicacies.",
+      "amenities": [
+        "Free WiFi",
+        "Palace View",
+        "Restaurant",
+        "Sandalwood Spa",
+        "Travel Desk"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Nilgiri Mist Mountain Lodge",
+      "location": "Ooty",
+      "rating": 4.6,
+      "price": 3500,
+      "pricePerNight": 3500,
+      "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80",
+      "description": "Colonial hill station cottage surrounded by rolling tea plantations, eucalyptus groves, and cozy stone fireplaces.",
+      "amenities": [
+        "Free WiFi",
+        "Tea Garden Walks",
+        "Fireplace Lounge",
+        "Heated Rooms",
+        "Restaurant"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "The Ridge Alpine Resort",
+      "location": "Shimla",
+      "rating": 4.7,
+      "price": 4300,
+      "pricePerNight": 4300,
+      "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80",
+      "description": "Panoramic mountain resort situated along Shimla's iconic ridge, featuring heated suites and Himalayan valley vistas.",
+      "amenities": [
+        "Free WiFi",
+        "Valley Views",
+        "Heated Swimming Pool",
+        "Cedar Forest Trails",
+        "Fine Dining"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Ganga Sanctuary Yoga Resort",
+      "location": "Rishikesh",
+      "rating": 4.8,
+      "price": 3800,
+      "pricePerNight": 3800,
+      "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80",
+      "description": "Spiritual oasis by the holy river Ganges offering daily guided meditation, river rafting adventures, and wellness cuisine.",
+      "amenities": [
+        "Free WiFi",
+        "Private Ghat",
+        "Yoga Shala",
+        "River Rafting",
+        "Organic Dining"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Golden Temple Heritage Inn",
+      "location": "Amritsar",
+      "rating": 4.6,
+      "price": 2600,
+      "pricePerNight": 2600,
+      "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=800&q=80",
+      "description": "Welcoming boutique hotel located a brief stroll from the Golden Temple, featuring traditional Punjabi hospitality and cuisine.",
+      "amenities": [
+        "Free WiFi",
+        "Temple Shuttle",
+        "Punjabi Restaurant",
+        "Travel Desk",
+        "Free Parking"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "The Rose City Grand",
+      "location": "Chandigarh",
+      "rating": 4.5,
+      "price": 3200,
+      "pricePerNight": 3200,
+      "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80",
+      "description": "Sleek modernist architecture in the heart of the planned city, featuring outdoor pool, stylish bistro, and lush lawns.",
+      "amenities": [
+        "Free WiFi",
+        "Swimming Pool",
+        "Cocktail Bistro",
+        "Gym",
+        "Business Center"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Sabarmati Riverfront Hotel",
+      "location": "Ahmedabad",
+      "rating": 4.5,
+      "price": 3100,
+      "pricePerNight": 3100,
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80",
+      "description": "Modern hotel along the revitalized Sabarmati promenade, celebrating Gujarati heritage, textiles, and traditional thalis.",
+      "amenities": [
+        "Free WiFi",
+        "Riverfront Promenade",
+        "Gujarati Thali Dining",
+        "Conference Hall",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Diamond City Luxury Hotel",
+      "location": "Surat",
+      "rating": 4.4,
+      "price": 2900,
+      "pricePerNight": 2900,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "description": "Upscale business hotel in the textile and diamond hub, offering spacious executive suites and multi-cuisine buffet dining.",
+      "amenities": [
+        "Free WiFi",
+        "Business Center",
+        "Multi-Cuisine Buffet",
+        "Fitness Center",
+        "Airport Pickup"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Nawabi Heritage Grand",
+      "location": "Lucknow",
+      "rating": 4.7,
+      "price": 3700,
+      "pricePerNight": 3700,
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+      "description": "Experience the royal Awadhi elegance, famed kebabs, chikankari decor, and gracious hospitality in the City of Nawabs.",
+      "amenities": [
+        "Free WiFi",
+        "Awadhi Restaurant",
+        "Courtyard Lounge",
+        "Swimming Pool",
+        "Spa"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Malwa Royal Palace Hotel",
+      "location": "Indore",
+      "rating": 4.5,
+      "price": 2700,
+      "pricePerNight": 2700,
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
+      "description": "Comfortable modern hotel located near Rajwada Palace and Sarafa bazaar, famous for clean luxury and culinary street food tours.",
+      "amenities": [
+        "Free WiFi",
+        "Restaurant",
+        "Complimentary Breakfast",
+        "Fitness Center",
+        "Free Parking"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Bhojtal Lakeview Resort",
+      "location": "Bhopal",
+      "rating": 4.6,
+      "price": 3000,
+      "pricePerNight": 3000,
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+      "description": "Tranquil retreat overlooking upper Bhojtal Lake, with sunset terraces, birdwatching trails, and contemporary rooms.",
+      "amenities": [
+        "Free WiFi",
+        "Lake View",
+        "Swimming Pool",
+        "Sunset Cafe",
+        "Boat Rides"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Rushikonda Beach Resort",
+      "location": "Visakhapatnam",
+      "rating": 4.6,
+      "price": 3300,
+      "pricePerNight": 3300,
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      "description": "Beachfront coastal paradise nestled between Eastern Ghats and the blue waters of Rushikonda beach.",
+      "amenities": [
+        "Free WiFi",
+        "Beach Access",
+        "Infinity Pool",
+        "Seafood Restaurant",
+        "Gym"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "French Quarter Villa Hotel",
+      "location": "Pondicherry",
+      "rating": 4.8,
+      "price": 4500,
+      "pricePerNight": 4500,
+      "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
+      "description": "Charming French colonial villa in the White Town quarter featuring mustard-yellow walls, bougainvillea courtyards, and croissants.",
+      "amenities": [
+        "Free WiFi",
+        "French Bakery Cafe",
+        "Inner Courtyard Pool",
+        "Bicycle Rentals",
+        "Library"
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Kanchenjunga Vista Lodge",
+      "location": "Darjeeling",
+      "rating": 4.7,
+      "price": 3900,
+      "pricePerNight": 3900,
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80",
+      "description": "Scenic hilltop lodge offering uninterrupted sunrise panoramas of Mt. Kanchenjunga, tea plantation tours, and cedar suites.",
+      "amenities": [
+        "Free WiFi",
+        "Mountain Panorama",
+        "Tea Tasting Lounge",
+        "Heated Fireplaces",
+        "Restaurant"
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Bandra Seafront Boutique Hotel",
+      "location": "Mumbai",
+      "rating": 4.6,
+      "price": 4800,
+      "pricePerNight": 4800,
+      "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80",
+      "description": "Stylish beachfront boutique accommodation in vibrant Bandra, surrounded by art cafes, sea breeze, and nightlife.",
+      "amenities": [
+        "Free WiFi",
+        "Sea View",
+        "Rooftop Tapas Bar",
+        "Fitness Center",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Calangute Palms Beach Club",
+      "location": "Goa",
+      "rating": 4.5,
+      "price": 3600,
+      "pricePerNight": 3600,
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
+      "description": "Vibrant beach club resort with palm-fringed swimming pools, private sundecks, beach parties, and gourmet shack dining.",
+      "amenities": [
+        "Free WiFi",
+        "Direct Beach Access",
+        "Swimming Pool",
+        "Cocktail Bar",
+        "Live Music"
+      ]
+    },
+    {
+      "id": "34",
+      "name": "Solang Valley Snow Resort",
+      "location": "Manali",
+      "rating": 4.8,
+      "price": 4600,
+      "pricePerNight": 4600,
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80",
+      "description": "Winter wonderland resort situated in Solang Valley, featuring ski equipment rentals, snow sledding, and alpine log cabins.",
+      "amenities": [
+        "Free WiFi",
+        "Ski-in/Ski-out",
+        "Snow Views",
+        "Fireplace",
+        "Spa & Hot Tub"
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Pink City Heritage Inn",
+      "location": "Jaipur",
+      "rating": 4.5,
+      "price": 3200,
+      "pricePerNight": 3200,
+      "image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=80",
+      "description": "Authentic Rajasthani hospitality steps away from Hawa Mahal, offering carved stone jharokhas and colorful hand-block printed suites.",
+      "amenities": [
+        "Free WiFi",
+        "Rooftop Cafe",
+        "Puppet Shows",
+        "Travel Desk",
+        "Air Conditioning"
+      ]
+    },
+    {
+      "id": "36",
+      "name": "The Palm Marina Luxury Resort",
+      "location": "Dubai",
+      "rating": 4.9,
+      "price": 11500,
+      "pricePerNight": 11500,
+      "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+      "description": "Ultra-luxury waterfront resort on Palm Jumeirah with private white sand beach, Michelin-starred dining, and private yacht charters.",
+      "amenities": [
+        "High-Speed WiFi",
+        "Private Beach",
+        "Infinity Pools",
+        "Michelin Dining",
+        "Luxury Spa",
+        "Yacht Charter"
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Marina Bay Skylight Hotel",
+      "location": "Singapore",
+      "rating": 4.9,
+      "price": 9800,
+      "pricePerNight": 9800,
+      "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80",
+      "description": "Futuristic luxury overlooking Gardens by the Bay, featuring iconic rooftop infinity pool, sky gardens, and award-winning dining.",
+      "amenities": [
+        "Free High-Speed WiFi",
+        "Rooftop SkyPool",
+        "Spa & Wellness",
+        "Sky Garden Lounge",
+        "Metro Access"
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Chao Phraya Riverfront Palace",
+      "location": "Bangkok",
+      "rating": 4.7,
+      "price": 5200,
+      "pricePerNight": 5200,
+      "image": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=800&q=80",
+      "description": "Riverside sanctuary situated along the bustling Chao Phraya river, featuring traditional Thai longtail boat shuttles and rooftop sky bar.",
+      "amenities": [
+        "Free WiFi",
+        "River Shuttle Boat",
+        "Rooftop Sky Bar",
+        "Infinity Pool",
+        "Traditional Thai Spa"
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Petronas Heights Grand Hotel",
+      "location": "Kuala Lumpur",
+      "rating": 4.7,
+      "price": 4900,
+      "pricePerNight": 4900,
+      "image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80",
+      "description": "Modern luxury hotel with glass facade overlooking the dazzling Petronas Twin Towers, rooftop cocktail infinity pool, and shopping arcade.",
+      "amenities": [
+        "Free WiFi",
+        "Twin Towers View",
+        "Infinity Pool",
+        "Rooftop Lounge",
+        "Direct Mall Access"
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Ubud Tropical Rainforest Haven",
+      "location": "Bali",
+      "rating": 4.9,
+      "price": 6400,
+      "pricePerNight": 6400,
+      "image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80",
+      "description": "Tranquil jungle sanctuary with private pool villas, tiered infinity pools overlooking emerald rice terraces, and healing yoga sessions.",
+      "amenities": [
+        "Free WiFi",
+        "Private Plunge Pools",
+        "Rice Terrace Views",
+        "Open-air Yoga Shala",
+        "Holistic Spa"
+      ]
+    },
+    {
+      "id": "41",
+      "name": "The Mayfair Royal Westminster",
+      "location": "London",
+      "rating": 4.8,
+      "price": 14500,
+      "pricePerNight": 14500,
+      "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80",
+      "description": "Timeless British sophistication in prestigious Mayfair, walking distance to Buckingham Palace, with traditional afternoon tea.",
+      "amenities": [
+        "High-Speed WiFi",
+        "Afternoon Tea Salon",
+        "Michelin Restaurant",
+        "Concierge Service",
+        "Valet Parking"
+      ]
+    },
+    {
+      "id": "42",
+      "name": "Eiffel Grand Boulevard Hotel",
+      "location": "Paris",
+      "rating": 4.8,
+      "price": 13800,
+      "pricePerNight": 13800,
+      "image": "https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=800&q=80",
+      "description": "Romantic Parisian luxury featuring wrought-iron balconies with direct views of the Eiffel Tower, French patisserie, and wine cellar.",
+      "amenities": [
+        "Free WiFi",
+        "Eiffel Tower View",
+        "French Bistro",
+        "Wine Tasting Cellar",
+        "Limousine Service"
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Colosseum Imperial Palazzo",
+      "location": "Rome",
+      "rating": 4.7,
+      "price": 11200,
+      "pricePerNight": 11200,
+      "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80",
+      "description": "Breathtaking historical palazzo overlooking ancient Roman ruins and the Colosseum, with rooftop espresso lounge and Roman baths.",
+      "amenities": [
+        "Free WiFi",
+        "Colosseum Views",
+        "Roman Bath Spa",
+        "Rooftop Terrace",
+        "Gourmet Italian Dining"
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Manhattan Central Park Tower",
+      "location": "New York",
+      "rating": 4.8,
+      "price": 16500,
+      "pricePerNight": 16500,
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80",
+      "description": "Sky-high luxury overlooking the treetops of Central Park and the Manhattan skyline, featuring designer suites and 24/7 concierge.",
+      "amenities": [
+        "High-Speed WiFi",
+        "Central Park Views",
+        "Rooftop Observatory",
+        "24/7 Fitness Club",
+        "Valet Service"
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Shinjuku Skytree Modern Hotel",
+      "location": "Tokyo",
+      "rating": 4.9,
+      "price": 12400,
+      "pricePerNight": 12400,
+      "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+      "description": "Sleek futuristic tower in Shinjuku with views of Mount Fuji, authentic Japanese Onsen baths, and robotic omakase sushi bar.",
+      "amenities": [
+        "Ultra High-Speed WiFi",
+        "Japanese Onsen Bath",
+        "Mount Fuji Views",
+        "Omakase Dining",
+        "Robot Concierge"
+      ]
+    },
+    {
+      "id": "46",
+      "name": "Burj Khalifa Panorama Suites",
+      "location": "Dubai",
+      "rating": 4.9,
+      "price": 13500,
+      "pricePerNight": 13500,
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+      "description": "Soaring glass tower directly facing Burj Khalifa with synchronized fountain views, infinity pool, and private butler service.",
+      "amenities": [
+        "High-Speed WiFi",
+        "Burj Khalifa View",
+        "Private Butler",
+        "Infinity Pool",
+        "Luxury Chauffeur"
+      ]
     }
   ],
   "rooms": [
@@ -176,6 +874,1414 @@
       "price": 5400,
       "capacity": 3,
       "isAvailable": true
+    },
+    {
+      "id": "103",
+      "hotelId": "1",
+      "roomNumber": "G-103",
+      "type": "Grand Family Suite",
+      "roomType": "Family Room",
+      "price": 7200,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "203",
+      "hotelId": "2",
+      "roomNumber": "O-203",
+      "type": "Grand Family Suite",
+      "roomType": "Family Room",
+      "price": 5120,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "303",
+      "hotelId": "3",
+      "roomNumber": "M-303",
+      "type": "Grand Family Suite",
+      "roomType": "Family Room",
+      "price": 4480,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "403",
+      "hotelId": "4",
+      "roomNumber": "R-403",
+      "type": "Grand Family Suite",
+      "roomType": "Family Room",
+      "price": 8320,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "503",
+      "hotelId": "5",
+      "roomNumber": "G-503",
+      "type": "Grand Family Suite",
+      "roomType": "Family Room",
+      "price": 5760,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "601",
+      "hotelId": "6",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 6120,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "602",
+      "hotelId": "6",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 6800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "603",
+      "hotelId": "6",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 10200,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "604",
+      "hotelId": "7",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4950,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "605",
+      "hotelId": "7",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 5500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "606",
+      "hotelId": "7",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 8250,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "607",
+      "hotelId": "8",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4410,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "608",
+      "hotelId": "8",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "609",
+      "hotelId": "8",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 7350,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "610",
+      "hotelId": "9",
+      "roomNumber": "S-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3780,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "611",
+      "hotelId": "9",
+      "roomNumber": "S-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "612",
+      "hotelId": "9",
+      "roomNumber": "S-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6300,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "613",
+      "hotelId": "10",
+      "roomNumber": "M-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3420,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "614",
+      "hotelId": "10",
+      "roomNumber": "M-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "615",
+      "hotelId": "10",
+      "roomNumber": "M-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5700,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "616",
+      "hotelId": "11",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3690,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "617",
+      "hotelId": "11",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4100,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "618",
+      "hotelId": "11",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6150,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "619",
+      "hotelId": "12",
+      "roomNumber": "K-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3060,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "620",
+      "hotelId": "12",
+      "roomNumber": "K-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3400,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "621",
+      "hotelId": "12",
+      "roomNumber": "K-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5100,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "622",
+      "hotelId": "13",
+      "roomNumber": "L-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 6480,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "623",
+      "hotelId": "13",
+      "roomNumber": "L-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 7200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "624",
+      "hotelId": "13",
+      "roomNumber": "L-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 10800,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "625",
+      "hotelId": "14",
+      "roomNumber": "S-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3240,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "626",
+      "hotelId": "14",
+      "roomNumber": "S-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3600,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "627",
+      "hotelId": "14",
+      "roomNumber": "S-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5400,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "628",
+      "hotelId": "15",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3960,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "629",
+      "hotelId": "15",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4400,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "630",
+      "hotelId": "15",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6600,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "631",
+      "hotelId": "16",
+      "roomNumber": "G-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3510,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "632",
+      "hotelId": "16",
+      "roomNumber": "G-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "633",
+      "hotelId": "16",
+      "roomNumber": "G-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5850,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "634",
+      "hotelId": "17",
+      "roomNumber": "F-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3330,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "635",
+      "hotelId": "17",
+      "roomNumber": "F-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3700,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "636",
+      "hotelId": "17",
+      "roomNumber": "F-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5550,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "637",
+      "hotelId": "18",
+      "roomNumber": "R-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2610,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "638",
+      "hotelId": "18",
+      "roomNumber": "R-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 2900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "639",
+      "hotelId": "18",
+      "roomNumber": "R-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4350,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "640",
+      "hotelId": "19",
+      "roomNumber": "N-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3150,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "641",
+      "hotelId": "19",
+      "roomNumber": "N-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "642",
+      "hotelId": "19",
+      "roomNumber": "N-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5250,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "643",
+      "hotelId": "20",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3870,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "644",
+      "hotelId": "20",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4300,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "645",
+      "hotelId": "20",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6450,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "646",
+      "hotelId": "21",
+      "roomNumber": "G-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3420,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "647",
+      "hotelId": "21",
+      "roomNumber": "G-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "648",
+      "hotelId": "21",
+      "roomNumber": "G-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5700,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "649",
+      "hotelId": "22",
+      "roomNumber": "G-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2340,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "650",
+      "hotelId": "22",
+      "roomNumber": "G-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 2600,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "651",
+      "hotelId": "22",
+      "roomNumber": "G-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 3900,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "652",
+      "hotelId": "23",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2880,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "653",
+      "hotelId": "23",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "654",
+      "hotelId": "23",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4800,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "655",
+      "hotelId": "24",
+      "roomNumber": "S-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2790,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "656",
+      "hotelId": "24",
+      "roomNumber": "S-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3100,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "657",
+      "hotelId": "24",
+      "roomNumber": "S-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4650,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "658",
+      "hotelId": "25",
+      "roomNumber": "D-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2610,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "659",
+      "hotelId": "25",
+      "roomNumber": "D-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 2900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "660",
+      "hotelId": "25",
+      "roomNumber": "D-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4350,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "661",
+      "hotelId": "26",
+      "roomNumber": "N-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3330,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "662",
+      "hotelId": "26",
+      "roomNumber": "N-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3700,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "663",
+      "hotelId": "26",
+      "roomNumber": "N-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5550,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "664",
+      "hotelId": "27",
+      "roomNumber": "M-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2430,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "665",
+      "hotelId": "27",
+      "roomNumber": "M-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 2700,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "666",
+      "hotelId": "27",
+      "roomNumber": "M-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4050,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "667",
+      "hotelId": "28",
+      "roomNumber": "B-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2700,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "668",
+      "hotelId": "28",
+      "roomNumber": "B-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3000,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "669",
+      "hotelId": "28",
+      "roomNumber": "B-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4500,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "670",
+      "hotelId": "29",
+      "roomNumber": "R-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2970,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "671",
+      "hotelId": "29",
+      "roomNumber": "R-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3300,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "672",
+      "hotelId": "29",
+      "roomNumber": "R-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4950,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "673",
+      "hotelId": "30",
+      "roomNumber": "F-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4050,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "674",
+      "hotelId": "30",
+      "roomNumber": "F-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "675",
+      "hotelId": "30",
+      "roomNumber": "F-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6750,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "676",
+      "hotelId": "31",
+      "roomNumber": "K-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3510,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "677",
+      "hotelId": "31",
+      "roomNumber": "K-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "678",
+      "hotelId": "31",
+      "roomNumber": "K-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5850,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "679",
+      "hotelId": "32",
+      "roomNumber": "B-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4320,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "680",
+      "hotelId": "32",
+      "roomNumber": "B-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "681",
+      "hotelId": "32",
+      "roomNumber": "B-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 7200,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "682",
+      "hotelId": "33",
+      "roomNumber": "C-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 3240,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "683",
+      "hotelId": "33",
+      "roomNumber": "C-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3600,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "684",
+      "hotelId": "33",
+      "roomNumber": "C-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 5400,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "685",
+      "hotelId": "34",
+      "roomNumber": "S-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4140,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "686",
+      "hotelId": "34",
+      "roomNumber": "S-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4600,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "687",
+      "hotelId": "34",
+      "roomNumber": "S-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 6900,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "688",
+      "hotelId": "35",
+      "roomNumber": "P-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 2880,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "689",
+      "hotelId": "35",
+      "roomNumber": "P-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 3200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "690",
+      "hotelId": "35",
+      "roomNumber": "P-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 4800,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "691",
+      "hotelId": "36",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 10350,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "692",
+      "hotelId": "36",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 11500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "693",
+      "hotelId": "36",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 17250,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "694",
+      "hotelId": "37",
+      "roomNumber": "M-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 8820,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "695",
+      "hotelId": "37",
+      "roomNumber": "M-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 9800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "696",
+      "hotelId": "37",
+      "roomNumber": "M-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 14700,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "697",
+      "hotelId": "38",
+      "roomNumber": "C-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4680,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "698",
+      "hotelId": "38",
+      "roomNumber": "C-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 5200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "699",
+      "hotelId": "38",
+      "roomNumber": "C-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 7800,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "700",
+      "hotelId": "39",
+      "roomNumber": "P-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 4410,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "701",
+      "hotelId": "39",
+      "roomNumber": "P-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 4900,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "702",
+      "hotelId": "39",
+      "roomNumber": "P-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 7350,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "703",
+      "hotelId": "40",
+      "roomNumber": "U-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 5760,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "704",
+      "hotelId": "40",
+      "roomNumber": "U-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 6400,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "705",
+      "hotelId": "40",
+      "roomNumber": "U-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 9600,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "706",
+      "hotelId": "41",
+      "roomNumber": "T-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 13050,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "707",
+      "hotelId": "41",
+      "roomNumber": "T-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 14500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "708",
+      "hotelId": "41",
+      "roomNumber": "T-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 21750,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "709",
+      "hotelId": "42",
+      "roomNumber": "E-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 12420,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "710",
+      "hotelId": "42",
+      "roomNumber": "E-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 13800,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "711",
+      "hotelId": "42",
+      "roomNumber": "E-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 20700,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "712",
+      "hotelId": "43",
+      "roomNumber": "C-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 10080,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "713",
+      "hotelId": "43",
+      "roomNumber": "C-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 11200,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "714",
+      "hotelId": "43",
+      "roomNumber": "C-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 16800,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "715",
+      "hotelId": "44",
+      "roomNumber": "M-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 14850,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "716",
+      "hotelId": "44",
+      "roomNumber": "M-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 16500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "717",
+      "hotelId": "44",
+      "roomNumber": "M-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 24750,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "718",
+      "hotelId": "45",
+      "roomNumber": "S-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 11160,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "719",
+      "hotelId": "45",
+      "roomNumber": "S-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 12400,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "720",
+      "hotelId": "45",
+      "roomNumber": "S-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 18600,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "721",
+      "hotelId": "46",
+      "roomNumber": "B-101",
+      "type": "Standard Room",
+      "roomType": "Standard",
+      "price": 12150,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "722",
+      "hotelId": "46",
+      "roomNumber": "B-201",
+      "type": "Deluxe King Room",
+      "roomType": "Deluxe",
+      "price": 13500,
+      "capacity": 2,
+      "isAvailable": true,
+      "status": "available"
+    },
+    {
+      "id": "723",
+      "hotelId": "46",
+      "roomNumber": "B-301",
+      "type": "Executive Sea/Skyline Suite",
+      "roomType": "Suite",
+      "price": 20250,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available"
     }
   ],
   "bookings": [

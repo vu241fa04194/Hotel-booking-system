@@ -44,7 +44,8 @@ const Booking = () => {
           roomService.getRoomById(roomId)
         ]);
 
-        if (!roomData.isAvailable) {
+        const isRoomAvail = roomData.isAvailable ?? (roomData.status === 'available');
+        if (!isRoomAvail) {
           setError('This room has already been booked. Please select an available room.');
         }
 
@@ -77,7 +78,7 @@ const Booking = () => {
         hotelId,
         hotelName: hotel?.name || 'Unknown Hotel',
         roomId,
-        roomType: room?.type || 'Standard',
+        roomType: room?.roomType || room?.type || 'Standard',
         guestName: formData.guestName,
         guestEmail: formData.guestEmail,
         guests: formData.guests || 1,
@@ -190,7 +191,7 @@ const Booking = () => {
       <div className="page-header">
         <h1 className="page-title">Complete Your Reservation</h1>
         <p className="page-subtitle">
-          Reserving <strong>{room?.type}</strong> at <strong>{hotel?.name}</strong> ({hotel?.location})
+          Reserving <strong>{room?.roomType || room?.type}</strong> at <strong>{hotel?.name}</strong> ({hotel?.location})
         </p>
       </div>
 

@@ -12,26 +12,29 @@ import { Link } from 'react-router-dom';
 const RoomCard = ({ room, hotelId }) => {
   if (!room) return null;
 
+  const roomTitle = room.roomType ?? room.type ?? 'Standard Room';
+  const isAvailable = room.isAvailable ?? (room.status === 'available');
+
   return (
     <article className="room-card">
       <div className="hotel-header">
-        <h4 className="room-title">{room.type}</h4>
+        <h4 className="room-title">{roomTitle}</h4>
         <span
           className={`room-badge ${
-            room.isAvailable ? 'badge-available' : 'badge-unavailable'
+            isAvailable ? 'badge-available' : 'badge-unavailable'
           }`}
         >
-          {room.isAvailable ? 'Available' : 'Booked'}
+          {isAvailable ? 'Available' : 'Booked'}
         </span>
       </div>
       <p className="room-meta">Room No: {room.roomNumber}</p>
-      <p className="room-meta">Capacity: Up to {room.capacity} Guests</p>
+      <p className="room-meta">Capacity: Up to {room.capacity || 2} Guests</p>
       <div className="hotel-footer">
         <div>
           <span className="hotel-price">₹{room.price}</span>
           <span className="hotel-price-unit"> / night</span>
         </div>
-        {room.isAvailable ? (
+        {isAvailable ? (
           <Link
             to={`/booking?hotelId=${hotelId}&roomId=${room.id}`}
             className="btn btn-primary"

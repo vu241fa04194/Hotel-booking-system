@@ -87,7 +87,7 @@ const HotelDetails = () => {
           <p className="hotel-location">📍 {hotel.location}</p>
           <p className="hotel-desc">{hotel.description}</p>
           <p className="hotel-price">
-            Starting from ₹{hotel.pricePerNight} <span className="hotel-price-unit">/ night</span>
+            Starting from ₹{hotel.price ?? hotel.pricePerNight} <span className="hotel-price-unit">/ night</span>
           </p>
 
           {hotel.amenities && hotel.amenities.length > 0 && (

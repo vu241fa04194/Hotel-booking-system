@@ -44,7 +44,10 @@ export const roomService = {
    */
   async updateRoomAvailability(id, isAvailable) {
     try {
-      const response = await apiClient.patch(`/rooms/${id}`, { isAvailable });
+      const response = await apiClient.patch(`/rooms/${id}`, {
+        isAvailable,
+        status: isAvailable ? 'available' : 'booked'
+      });
       return response.data;
     } catch (error) {
       throw handleAxiosError(error);

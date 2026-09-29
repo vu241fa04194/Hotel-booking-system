@@ -42,7 +42,7 @@ const HotelCard = ({ hotel }) => {
         )}
         <div className="hotel-footer">
           <div>
-            <span className="hotel-price">₹{hotel.pricePerNight}</span>
+            <span className="hotel-price">₹{hotel.price ?? hotel.pricePerNight}</span>
             <span className="hotel-price-unit"> / night</span>
           </div>
           <div className="card-actions">
