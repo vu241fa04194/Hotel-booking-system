@@ -12,9 +12,11 @@ const SearchBar = ({ searchQuery = '', onSearchChange }) => {
   return (
     <div className="search-bar">
       <input
+        id="hotel-search-input"
         type="text"
         className="search-input"
         placeholder="Search by hotel name or city..."
+        aria-label="Search by hotel name or city"
         value={searchQuery}
         onChange={(e) => onSearchChange && onSearchChange(e.target.value)}
       />

@@ -48,11 +48,27 @@ export const bookingService = {
   },
 
   /**
-   * Cancel or delete a booking by ID.
+   * Cancel a booking by updating its status to 'Cancelled'.
+   * @param {string|number} id - Booking ID
+   * @returns {Promise<Object>} Updated booking record
+   */
+  async cancelBooking(id) {
+    try {
+      const response = await apiClient.patch(`/bookings/${id}`, {
+        status: 'Cancelled'
+      });
+      return response.data;
+    } catch (error) {
+      throw handleAxiosError(error);
+    }
+  },
+
+  /**
+   * Permanently delete a booking by ID.
    * @param {string|number} id - Booking ID
    * @returns {Promise<Object>} Response confirmation
    */
-  async cancelBooking(id) {
+  async deleteBooking(id) {
     try {
       const response = await apiClient.delete(`/bookings/${id}`);
       return response.data;

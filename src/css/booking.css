@@ -106,3 +106,30 @@
   background-color: #fef3c7;
   color: #92400e;
 }
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Responsive Booking Styles (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .booking-card {
+    padding: 1.25rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+  }
+}

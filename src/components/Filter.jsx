@@ -14,8 +14,13 @@ const Filter = ({
   selectedLocation = '',
   onLocationChange,
   selectedSort = '',
-  onSortChange
+  onSortChange,
+  locations = []
 }) => {
+  // Use passed locations or fallback default
+  const availableLocations =
+    locations.length > 0 ? locations : ['Mumbai', 'Goa', 'Manali'];
+
   return (
     <div className="filter-bar">
       <div className="filter-group">
@@ -29,9 +34,11 @@ const Filter = ({
           onChange={(e) => onLocationChange && onLocationChange(e.target.value)}
         >
           <option value="">All Locations</option>
-          <option value="Mumbai">Mumbai</option>
-          <option value="Goa">Goa</option>
-          <option value="Manali">Manali</option>
+          {availableLocations.map((location) => (
+            <option key={location} value={location}>
+              {location}
+            </option>
+          ))}
         </select>
       </div>
 

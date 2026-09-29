@@ -52,6 +52,11 @@ const Home = () => {
       return 0;
     });
 
+  // Extract unique locations dynamically for filter options
+  const uniqueLocations = Array.from(
+    new Set(hotels.map((h) => h.location).filter(Boolean))
+  );
+
   return (
     <div>
       <div className="page-header">
@@ -71,6 +76,7 @@ const Home = () => {
           onLocationChange={setSelectedLocation}
           selectedSort={selectedSort}
           onSortChange={setSelectedSort}
+          locations={uniqueLocations}
         />
       </div>
 

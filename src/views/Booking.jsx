@@ -4,6 +4,7 @@ import hotelService from '../services/hotelService';
 import roomService from '../services/roomService';
 import bookingService from '../services/bookingService';
 import BookingForm from '../components/BookingForm';
+import { ValidationException } from '../exception/validationException';
 
 /**
  * Booking View
@@ -54,6 +55,14 @@ const Booking = () => {
       setSubmitting(true);
       setError(null);
 
+      // Business & Payload Validation using ValidationException
+      if (!hotelId || !roomId) {
+        throw new ValidationException('Invalid hotel or room reference.');
+      }
+      if (!formData.guestName || !formData.guestEmail || !formData.checkIn || !formData.checkOut) {
+        throw new ValidationException('All reservation fields are required.');
+      }
+
       // Calculate days difference
       const start = new Date(formData.checkIn);
       const end = new Date(formData.checkOut);
@@ -78,7 +87,11 @@ const Booking = () => {
       await bookingService.createBooking(bookingPayload);
       navigate('/history');
     } catch (err) {
-      setError(err.message || 'Failed to complete booking. Please try again.');
+      if (err instanceof ValidationException) {
+        setError(err.message);
+      } else {
+        setError(err.message || 'Failed to complete booking. Please try again.');
+      }
     } finally {
       setSubmitting(false);
     }

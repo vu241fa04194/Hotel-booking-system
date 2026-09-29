@@ -11,6 +11,8 @@ const BookingHistory = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [actionLoadingId, setActionLoadingId] = useState(null);
+
   const fetchBookings = async () => {
     try {
       setLoading(true);
@@ -33,11 +35,31 @@ const BookingHistory = () => {
     if (!confirmed) return;
 
     try {
-      await bookingService.cancelBooking(id);
-      // Refresh list
-      setBookings((prev) => prev.filter((b) => b.id !== id));
+      setActionLoadingId(id);
+      const updated = await bookingService.cancelBooking(id);
+      // Update status in local state to reflect cancellation immediately
+      setBookings((prev) =>
+        prev.map((b) => (b.id === id ? { ...b, status: 'Cancelled' } : b))
+      );
     } catch (err) {
       setError(err.message || 'Failed to cancel booking.');
+    } finally {
+      setActionLoadingId(null);
+    }
+  };
+
+  const handleDeleteBooking = async (id) => {
+    const confirmed = window.confirm('Permanently delete this booking record?');
+    if (!confirmed) return;
+
+    try {
+      setActionLoadingId(id);
+      await bookingService.deleteBooking(id);
+      setBookings((prev) => prev.filter((b) => b.id !== id));
+    } catch (err) {
+      setError(err.message || 'Failed to delete booking record.');
+    } finally {
+      setActionLoadingId(null);
     }
   };
 
@@ -73,7 +95,7 @@ const BookingHistory = () => {
                 <th>Check-Out</th>
                 <th>Total</th>
                 <th>Status</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -98,13 +120,27 @@ const BookingHistory = () => {
                     </span>
                   </td>
                   <td>
-                    <button
-                      type="button"
-                      className="btn btn-danger"
-                      onClick={() => handleCancelBooking(booking.id)}
-                    >
-                      Cancel
-                    </button>
+                    <div className="table-actions">
+                      {booking.status !== 'Cancelled' ? (
+                        <button
+                          type="button"
+                          className="btn btn-warning"
+                          disabled={actionLoadingId === booking.id}
+                          onClick={() => handleCancelBooking(booking.id)}
+                        >
+                          {actionLoadingId === booking.id ? 'Cancelling...' : 'Cancel'}
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className="btn btn-danger"
+                          disabled={actionLoadingId === booking.id}
+                          onClick={() => handleDeleteBooking(booking.id)}
+                        >
+                          {actionLoadingId === booking.id ? 'Deleting...' : 'Delete'}
+                        </button>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}

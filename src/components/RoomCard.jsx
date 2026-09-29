@@ -31,13 +31,17 @@ const RoomCard = ({ room, hotelId }) => {
           <span className="hotel-price">₹{room.price}</span>
           <span className="hotel-price-unit"> / night</span>
         </div>
-        {room.isAvailable && (
+        {room.isAvailable ? (
           <Link
             to={`/booking?hotelId=${hotelId}&roomId=${room.id}`}
             className="btn btn-primary"
           >
             Book Room
           </Link>
+        ) : (
+          <button type="button" className="btn btn-secondary" disabled>
+            Booked
+          </button>
         )}
       </div>
     </article>

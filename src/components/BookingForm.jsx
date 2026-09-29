@@ -37,6 +37,8 @@ const BookingForm = ({ onSubmit, isLoading = false }) => {
 
   const validate = () => {
     const errors = {};
+    const today = new Date().toISOString().split('T')[0];
+
     if (!formData.guestName.trim()) {
       errors.guestName = 'Guest name is required.';
     }
@@ -47,6 +49,8 @@ const BookingForm = ({ onSubmit, isLoading = false }) => {
     }
     if (!formData.checkIn) {
       errors.checkIn = 'Check-in date is required.';
+    } else if (formData.checkIn < today) {
+      errors.checkIn = 'Check-in date cannot be in the past.';
     }
     if (!formData.checkOut) {
       errors.checkOut = 'Check-out date is required.';
@@ -115,6 +119,7 @@ const BookingForm = ({ onSubmit, isLoading = false }) => {
           name="checkIn"
           type="date"
           className="form-input"
+          min={new Date().toISOString().split('T')[0]}
           value={formData.checkIn}
           onChange={handleChange}
         />
@@ -132,6 +137,7 @@ const BookingForm = ({ onSubmit, isLoading = false }) => {
           name="checkOut"
           type="date"
           className="form-input"
+          min={formData.checkIn || new Date().toISOString().split('T')[0]}
           value={formData.checkOut}
           onChange={handleChange}
         />
