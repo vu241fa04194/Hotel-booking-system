@@ -27,6 +27,8 @@ const Filter = ({
   onMaxPriceChange,
   minRating = '',
   onMinRatingChange,
+  onlyAvailable = false,
+  onOnlyAvailableChange,
   selectedSort = '',
   onSortChange,
   locations = [],
@@ -107,6 +109,20 @@ const Filter = ({
           <option value="4.0">★ 4.0 & above</option>
           <option value="3.5">★ 3.5 & above</option>
         </select>
+      </div>
+
+      {/* Available Rooms Only Filter */}
+      <div className="filter-group filter-checkbox-group">
+        <label htmlFor="filter-available-only" className="filter-checkbox-label">
+          <input
+            id="filter-available-only"
+            type="checkbox"
+            className="filter-checkbox"
+            checked={onlyAvailable}
+            onChange={(e) => onOnlyAvailableChange && onOnlyAvailableChange(e.target.checked)}
+          />
+          <span>Available Rooms Only</span>
+        </label>
       </div>
 
       {/* Sorting Control */}

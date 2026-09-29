@@ -166,7 +166,7 @@ const Booking = () => {
           <button
             type="button"
             className="btn btn-primary"
-            onClick={() => navigate('/history')}
+            onClick={() => navigate('/bookings')}
           >
             View in Booking History →
           </button>

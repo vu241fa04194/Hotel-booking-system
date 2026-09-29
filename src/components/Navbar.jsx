@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 /**
  * Navbar Component
- * Provides global navigation across the application.
+ * Provides global navigation across the application:
+ * 🏠 Home (/), 🏨 Hotels (/hotels), 📋 My Bookings (/bookings)
+ * with active page highlighting.
  */
 const Navbar = () => {
   return (
@@ -22,7 +24,7 @@ const Navbar = () => {
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
-                Home
+                🏠 Home
               </NavLink>
             </li>
             <li>
@@ -32,17 +34,17 @@ const Navbar = () => {
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
-                Hotels
+                🏨 Hotels
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/history"
+                to="/bookings"
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
-                Bookings
+                📋 My Bookings
               </NavLink>
             </li>
           </ul>

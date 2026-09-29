@@ -49,7 +49,7 @@ const HotelDetails = () => {
     return (
       <div>
         <p className="alert alert-error">{error}</p>
-        <Link to="/" className="btn btn-secondary">
+        <Link to="/hotels" className="btn btn-secondary">
           ← Back to Hotels
         </Link>
       </div>
@@ -60,7 +60,7 @@ const HotelDetails = () => {
     return (
       <div>
         <p className="alert alert-info">Hotel not found.</p>
-        <Link to="/" className="btn btn-secondary">
+        <Link to="/hotels" className="btn btn-secondary">
           ← Back to Hotels
         </Link>
       </div>
@@ -80,7 +80,7 @@ const HotelDetails = () => {
   return (
     <div>
       <div className="mb-1">
-        <Link to="/" className="btn btn-secondary">
+        <Link to="/hotels" className="btn btn-secondary">
           ← Back to Hotels
         </Link>
       </div>

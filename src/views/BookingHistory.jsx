@@ -101,7 +101,7 @@ const BookingHistory = () => {
           <div className="empty-state-icon">📋</div>
           <h3 className="empty-state-title">No bookings found</h3>
           <p className="empty-state-text">You have not made any hotel reservations yet.</p>
-          <Link to="/" className="btn btn-primary">
+          <Link to="/hotels" className="btn btn-primary">
             Explore Hotels & Book Now
           </Link>
         </div>

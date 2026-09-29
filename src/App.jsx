@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './views/Home';
+import Hotels from './views/Hotels';
 import HotelDetails from './views/HotelDetails';
 import Booking from './views/Booking';
 import BookingHistory from './views/BookingHistory';
@@ -24,10 +25,11 @@ function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/hotels" element={<Home />} />
+          <Route path="/hotels" element={<Hotels />} />
+          <Route path="/bookings" element={<BookingHistory />} />
+          <Route path="/history" element={<BookingHistory />} />
           <Route path="/hotel/:id" element={<HotelDetails />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/history" element={<BookingHistory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

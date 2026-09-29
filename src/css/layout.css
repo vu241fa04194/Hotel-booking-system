@@ -53,12 +53,25 @@
 .nav-link {
   color: var(--text-secondary);
   font-weight: 500;
-  transition: color 0.2s ease;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid transparent;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--primary-color);
+  background-color: #f1f5f9;
+}
+
 .nav-link.active {
   color: var(--primary-color);
+  background-color: #eff6ff;
+  font-weight: 600;
+  border-color: #bfdbfe;
 }
 
 /* Page Header */
