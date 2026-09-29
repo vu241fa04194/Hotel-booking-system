@@ -792,8 +792,8 @@
       "type": "Deluxe King Room",
       "price": 4500,
       "capacity": 2,
-      "isAvailable": false,
-      "status": "booked",
+      "isAvailable": true,
+      "status": "available",
       "roomType": "Deluxe King Room"
     },
     {
@@ -2305,20 +2305,6 @@
     }
   ],
   "bookings": [
-    {
-      "id": "b1",
-      "hotelId": "1",
-      "hotelName": "Grand Palace Hotel",
-      "roomId": "101",
-      "roomType": "Deluxe King Room",
-      "guestName": "John Doe",
-      "guestEmail": "john@example.com",
-      "guests": 2,
-      "checkIn": "2026-10-05",
-      "checkOut": "2026-10-08",
-      "totalPrice": 13500,
-      "status": "Confirmed"
-    },
     {
       "hotelId": "2",
       "hotelName": "Ocean View Resort",
