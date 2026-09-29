@@ -89,6 +89,19 @@ const HotelDetails = () => {
           <p className="hotel-price">
             Starting from ₹{hotel.pricePerNight} <span className="hotel-price-unit">/ night</span>
           </p>
+
+          {hotel.amenities && hotel.amenities.length > 0 && (
+            <div className="hotel-amenities-section">
+              <h3 className="amenities-heading">Hotel Amenities & Features</h3>
+              <div className="amenities-badge-list">
+                {hotel.amenities.map((item, index) => (
+                  <span key={index} className="amenity-badge">
+                    ✓ {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

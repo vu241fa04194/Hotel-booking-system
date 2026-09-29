@@ -34,6 +34,21 @@ export const roomService = {
     } catch (error) {
       throw handleAxiosError(error);
     }
+  },
+
+  /**
+   * Update room availability status.
+   * @param {string|number} id - Room ID
+   * @param {boolean} isAvailable - Availability flag
+   * @returns {Promise<Object>} Updated room details
+   */
+  async updateRoomAvailability(id, isAvailable) {
+    try {
+      const response = await apiClient.patch(`/rooms/${id}`, { isAvailable });
+      return response.data;
+    } catch (error) {
+      throw handleAxiosError(error);
+    }
   }
 };
 

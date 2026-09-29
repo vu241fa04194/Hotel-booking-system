@@ -6,12 +6,15 @@ import HotelCard from '../components/HotelCard';
 
 /**
  * Home View
- * Displays the hotel search, filters, and list of available hotels.
+ * Provides a hero banner, full search/filter toolbar, and the "Explore Hotels" catalog.
  */
 const Home = () => {
   const [hotels, setHotels] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+  const [minRating, setMinRating] = useState('');
   const [selectedSort, setSelectedSort] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,16 +37,53 @@ const Home = () => {
     fetchHotels();
   }, []);
 
-  // Filter and sort logic
+  // Reset all filters to default
+  const handleResetFilters = () => {
+    setSearchQuery('');
+    setSelectedLocation('');
+    setMinPrice('');
+    setMaxPrice('');
+    setMinRating('');
+    setSelectedSort('');
+  };
+
+  // Derive unique locations dynamically from hotels
+  const uniqueLocations = Array.from(
+    new Set(hotels.map((h) => h.location).filter(Boolean))
+  );
+
+  // Comprehensive multi-factor filtering & sorting
   const filteredHotels = hotels
     .filter((hotel) => {
-      const matchesSearch =
-        hotel.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hotel.location.toLowerCase().includes(searchQuery.toLowerCase());
+      const query = searchQuery.toLowerCase().trim();
+      const matchesSearch = query
+        ? hotel.name.toLowerCase().includes(query) ||
+          hotel.location.toLowerCase().includes(query)
+        : true;
+
       const matchesLocation = selectedLocation
         ? hotel.location.toLowerCase() === selectedLocation.toLowerCase()
         : true;
-      return matchesSearch && matchesLocation;
+
+      const matchesMinPrice = minPrice
+        ? hotel.pricePerNight >= Number(minPrice)
+        : true;
+
+      const matchesMaxPrice = maxPrice
+        ? hotel.pricePerNight <= Number(maxPrice)
+        : true;
+
+      const matchesRating = minRating
+        ? hotel.rating >= Number(minRating)
+        : true;
+
+      return (
+        matchesSearch &&
+        matchesLocation &&
+        matchesMinPrice &&
+        matchesMaxPrice &&
+        matchesRating
+      );
     })
     .sort((a, b) => {
       if (selectedSort === 'price-asc') return a.pricePerNight - b.pricePerNight;
@@ -52,47 +92,83 @@ const Home = () => {
       return 0;
     });
 
-  // Extract unique locations dynamically for filter options
-  const uniqueLocations = Array.from(
-    new Set(hotels.map((h) => h.location).filter(Boolean))
-  );
-
   return (
     <div>
-      <div className="page-header">
-        <h1 className="page-title">Find Your Next Stay</h1>
-        <p className="page-subtitle">
-          Search luxury hotels, cozy resorts, and budget rooms across top destinations.
-        </p>
-      </div>
+      {/* Hero Section with Large Search */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <span className="hero-badge">Welcome to HotelStay</span>
+          <h1 className="hero-title">Find & Book Your Perfect Stay</h1>
+          <p className="hero-subtitle">
+            Explore top-rated luxury resorts, cozy mountain retreats, and seaside villas.
+          </p>
+          <div className="hero-search-box">
+            <SearchBar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+            />
+          </div>
+        </div>
+      </section>
 
-      <div className="toolbar-container">
-        <SearchBar
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-        />
-        <Filter
-          selectedLocation={selectedLocation}
-          onLocationChange={setSelectedLocation}
-          selectedSort={selectedSort}
-          onSortChange={setSelectedSort}
-          locations={uniqueLocations}
-        />
-      </div>
+      {/* Explore Hotels Section */}
+      <section id="explore" className="explore-section">
+        <div className="section-header">
+          <div>
+            <h2 className="section-title">Explore Hotels</h2>
+            <p className="section-subtitle">
+              Showing {filteredHotels.length} of {hotels.length} available properties
+            </p>
+          </div>
+        </div>
 
-      {loading && <p className="alert alert-info">Loading available hotels...</p>}
+        {/* Filters Toolbar */}
+        <div className="toolbar-container">
+          <Filter
+            selectedLocation={selectedLocation}
+            onLocationChange={setSelectedLocation}
+            minPrice={minPrice}
+            onMinPriceChange={setMinPrice}
+            maxPrice={maxPrice}
+            onMaxPriceChange={setMaxPrice}
+            minRating={minRating}
+            onMinRatingChange={setMinRating}
+            selectedSort={selectedSort}
+            onSortChange={setSelectedSort}
+            locations={uniqueLocations}
+            onResetFilters={handleResetFilters}
+          />
+        </div>
 
-      {error && <p className="alert alert-error">{error}</p>}
+        {/* Loading & Error States */}
+        {loading && <p className="alert alert-info">Loading available hotels...</p>}
+        {error && <p className="alert alert-error">{error}</p>}
 
-      {!loading && !error && filteredHotels.length === 0 && (
-        <p className="alert alert-info">No hotels found matching your criteria.</p>
-      )}
+        {/* Empty State */}
+        {!loading && !error && filteredHotels.length === 0 && (
+          <div className="empty-state">
+            <div className="empty-state-icon">🔍</div>
+            <h3 className="empty-state-title">No hotels found</h3>
+            <p className="empty-state-text">
+              We couldn't find any hotels matching your current search or filter criteria.
+            </p>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleResetFilters}
+            >
+              Reset All Filters
+            </button>
+          </div>
+        )}
 
-      <div className="hotel-grid">
-        {filteredHotels.map((hotel) => (
-          <HotelCard key={hotel.id} hotel={hotel} />
-        ))}
-      </div>
+        {/* Hotels Responsive Grid */}
+        <div className="hotel-grid">
+          {filteredHotels.map((hotel) => (
+            <HotelCard key={hotel.id} hotel={hotel} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

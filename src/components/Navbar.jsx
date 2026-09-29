@@ -17,6 +17,17 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
+                end
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/hotels"
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
@@ -31,7 +42,7 @@ const Navbar = () => {
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
-                My Bookings
+                Bookings
               </NavLink>
             </li>
           </ul>

@@ -8,7 +8,8 @@ import { ValidationException } from '../exception/validationException';
 
 /**
  * Booking View
- * Handles the room reservation process and submits booking data.
+ * Handles the room reservation process, confirms booking,
+ * and updates room availability via services.
  */
 const Booking = () => {
   const [searchParams] = useSearchParams();
@@ -22,6 +23,10 @@ const Booking = () => {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
+
+  // Booking confirmation state
+  const [bookingSuccess, setBookingSuccess] = useState(false);
+  const [confirmedBooking, setConfirmedBooking] = useState(null);
 
   useEffect(() => {
     const loadDetails = async () => {
@@ -38,6 +43,11 @@ const Booking = () => {
           hotelService.getHotelById(hotelId),
           roomService.getRoomById(roomId)
         ]);
+
+        if (!roomData.isAvailable) {
+          setError('This room has already been booked. Please select an available room.');
+        }
+
         setHotel(hotelData);
         setRoom(roomData);
       } catch (err) {
@@ -55,20 +65,13 @@ const Booking = () => {
       setSubmitting(true);
       setError(null);
 
-      // Business & Payload Validation using ValidationException
+      // Business & Payload Validation
       if (!hotelId || !roomId) {
         throw new ValidationException('Invalid hotel or room reference.');
       }
       if (!formData.guestName || !formData.guestEmail || !formData.checkIn || !formData.checkOut) {
         throw new ValidationException('All reservation fields are required.');
       }
-
-      // Calculate days difference
-      const start = new Date(formData.checkIn);
-      const end = new Date(formData.checkOut);
-      const diffTime = Math.abs(end - start);
-      const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) || 1;
-      const totalPrice = nights * (room?.price || 0);
 
       const bookingPayload = {
         hotelId,
@@ -77,15 +80,22 @@ const Booking = () => {
         roomType: room?.type || 'Standard',
         guestName: formData.guestName,
         guestEmail: formData.guestEmail,
+        guests: formData.guests || 1,
         checkIn: formData.checkIn,
         checkOut: formData.checkOut,
-        totalPrice,
+        totalPrice: formData.totalPrice,
         status: 'Confirmed'
       };
 
-      // Service call (No direct Axios in view)
-      await bookingService.createBooking(bookingPayload);
-      navigate('/history');
+      // 1. Create booking in JSON Server
+      const createdBooking = await bookingService.createBooking(bookingPayload);
+
+      // 2. Update room availability status to booked (isAvailable: false)
+      await roomService.updateRoomAvailability(roomId, false);
+
+      // 3. Show booking confirmation
+      setConfirmedBooking(createdBooking);
+      setBookingSuccess(true);
     } catch (err) {
       if (err instanceof ValidationException) {
         setError(err.message);
@@ -101,7 +111,64 @@ const Booking = () => {
     return <p className="alert alert-info">Preparing booking summary...</p>;
   }
 
-  if (error && (!hotel || !room)) {
+  // Confirmation Success View
+  if (bookingSuccess && confirmedBooking) {
+    return (
+      <div className="confirmation-card">
+        <div className="confirmation-icon">🎉</div>
+        <h1 className="confirmation-title">Booking Confirmed!</h1>
+        <p className="confirmation-subtitle">
+          Your reservation has been successfully placed and the room is reserved for you.
+        </p>
+
+        <div className="confirmation-details">
+          <div className="confirmation-row">
+            <span>Booking Reference:</span>
+            <strong>#{confirmedBooking.id}</strong>
+          </div>
+          <div className="confirmation-row">
+            <span>Hotel:</span>
+            <strong>{confirmedBooking.hotelName}</strong>
+          </div>
+          <div className="confirmation-row">
+            <span>Room:</span>
+            <strong>{confirmedBooking.roomType}</strong>
+          </div>
+          <div className="confirmation-row">
+            <span>Guest Name:</span>
+            <span>{confirmedBooking.guestName}</span>
+          </div>
+          <div className="confirmation-row">
+            <span>Guests:</span>
+            <span>{confirmedBooking.guests} Guest(s)</span>
+          </div>
+          <div className="confirmation-row">
+            <span>Dates:</span>
+            <span>{confirmedBooking.checkIn} to {confirmedBooking.checkOut}</span>
+          </div>
+          <div className="confirmation-row total-row">
+            <span>Total Paid:</span>
+            <strong className="confirmation-price">₹{confirmedBooking.totalPrice}</strong>
+          </div>
+        </div>
+
+        <div className="confirmation-actions">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => navigate('/history')}
+          >
+            View in Booking History →
+          </button>
+          <Link to="/" className="btn btn-secondary">
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (error && (!hotel || !room || !room.isAvailable)) {
     return (
       <div>
         <p className="alert alert-error">{error}</p>
@@ -123,13 +190,18 @@ const Booking = () => {
       <div className="page-header">
         <h1 className="page-title">Complete Your Reservation</h1>
         <p className="page-subtitle">
-          Booking <strong>{room?.type}</strong> at <strong>{hotel?.name}</strong> ({hotel?.location})
+          Reserving <strong>{room?.type}</strong> at <strong>{hotel?.name}</strong> ({hotel?.location})
         </p>
       </div>
 
       {error && <p className="alert alert-error">{error}</p>}
 
-      <BookingForm onSubmit={handleBookingSubmit} isLoading={submitting} />
+      <BookingForm
+        onSubmit={handleBookingSubmit}
+        isLoading={submitting}
+        room={room}
+        hotel={hotel}
+      />
     </div>
   );
 };
