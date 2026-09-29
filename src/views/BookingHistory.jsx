@@ -46,10 +46,10 @@ const BookingHistory = () => {
       // 1. Update booking status to Cancelled
       await bookingService.cancelBooking(id);
 
-      // 2. Restore room availability in JSON Server (isAvailable: true)
+      // 2. Restore room availability in JSON Server (status: 'available', isAvailable: true)
       if (targetBooking?.roomId) {
         try {
-          await roomService.updateRoomAvailability(targetBooking.roomId, true);
+          await roomService.updateRoomStatus(targetBooking.roomId, 'available');
         } catch (roomErr) {
           console.warn('Room availability update notice:', roomErr);
         }

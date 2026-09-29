@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import hotelService from '../services/hotelService';
+import roomService from '../services/roomService';
 import SearchBar from '../components/SearchBar';
 import Filter from '../components/Filter';
 import HotelCard from '../components/HotelCard';
@@ -10,6 +11,7 @@ import HotelCard from '../components/HotelCard';
  */
 const Home = () => {
   const [hotels, setHotels] = useState([]);
+  const [rooms, setRooms] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
   const [minPrice, setMinPrice] = useState('');
@@ -19,14 +21,18 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch hotels using hotelService (No direct Axios in components)
+  // Fetch hotels and rooms using services (No direct Axios in components)
   useEffect(() => {
-    const fetchHotels = async () => {
+    const fetchHotelsAndRooms = async () => {
       try {
         setLoading(true);
         setError(null);
-        const data = await hotelService.getAllHotels();
-        setHotels(data);
+        const [hotelsData, roomsData] = await Promise.all([
+          hotelService.getAllHotels(),
+          roomService.getAllRooms()
+        ]);
+        setHotels(hotelsData);
+        setRooms(roomsData);
       } catch (err) {
         setError(err.message || 'Failed to load hotels. Please ensure JSON server is running.');
       } finally {
@@ -34,7 +40,7 @@ const Home = () => {
       }
     };
 
-    fetchHotels();
+    fetchHotelsAndRooms();
   }, []);
 
   // Reset all filters to default
@@ -168,9 +174,22 @@ const Home = () => {
 
         {/* Hotels Responsive Grid */}
         <div className="hotel-grid">
-          {filteredHotels.map((hotel) => (
-            <HotelCard key={hotel.id} hotel={hotel} />
-          ))}
+          {filteredHotels.map((hotel) => {
+            const hotelRooms = rooms.filter(
+              (r) => String(r.hotelId) === String(hotel.id)
+            );
+            const availableRoomsCount = hotelRooms.filter(
+              (r) => r.status === 'available' || r.isAvailable === true
+            ).length;
+
+            return (
+              <HotelCard
+                key={hotel.id}
+                hotel={hotel}
+                availableRoomsCount={availableRoomsCount}
+              />
+            );
+          })}
         </div>
       </section>
     </div>

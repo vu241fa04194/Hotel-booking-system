@@ -7,6 +7,20 @@ import { handleAxiosError } from '../exception/apiException';
  */
 export const roomService = {
   /**
+   * Fetch all rooms across all hotels.
+   * Used for calculating available room counts on hotel listings.
+   * @returns {Promise<Array>} List of all rooms
+   */
+  async getAllRooms() {
+    try {
+      const response = await apiClient.get('/rooms');
+      return response.data;
+    } catch (error) {
+      throw handleAxiosError(error);
+    }
+  },
+
+  /**
    * Fetch all rooms belonging to a specific hotel.
    * @param {string|number} hotelId - Hotel ID
    * @returns {Promise<Array>} List of rooms
@@ -15,6 +29,22 @@ export const roomService = {
     try {
       const response = await apiClient.get('/rooms', {
         params: { hotelId }
+      });
+      return response.data;
+    } catch (error) {
+      throw handleAxiosError(error);
+    }
+  },
+
+  /**
+   * Fetch only available rooms for a specific hotel.
+   * @param {string|number} hotelId - Hotel ID
+   * @returns {Promise<Array>} List of available rooms
+   */
+  async getAvailableRoomsByHotelId(hotelId) {
+    try {
+      const response = await apiClient.get('/rooms', {
+        params: { hotelId, status: 'available' }
       });
       return response.data;
     } catch (error) {
@@ -37,16 +67,36 @@ export const roomService = {
   },
 
   /**
-   * Update room availability status.
+   * Update room availability status using a boolean flag.
    * @param {string|number} id - Room ID
    * @param {boolean} isAvailable - Availability flag
    * @returns {Promise<Object>} Updated room details
    */
   async updateRoomAvailability(id, isAvailable) {
     try {
+      const status = isAvailable ? 'available' : 'booked';
       const response = await apiClient.patch(`/rooms/${id}`, {
         isAvailable,
-        status: isAvailable ? 'available' : 'booked'
+        status
+      });
+      return response.data;
+    } catch (error) {
+      throw handleAxiosError(error);
+    }
+  },
+
+  /**
+   * Update room status directly ('available' or 'booked').
+   * @param {string|number} id - Room ID
+   * @param {string} status - 'available' | 'booked'
+   * @returns {Promise<Object>} Updated room details
+   */
+  async updateRoomStatus(id, status) {
+    try {
+      const isAvailable = status === 'available';
+      const response = await apiClient.patch(`/rooms/${id}`, {
+        status,
+        isAvailable
       });
       return response.data;
     } catch (error) {

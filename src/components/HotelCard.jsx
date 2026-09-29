@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 /**
  * HotelCard Component
- * Displays a summary card for a hotel with details and navigation link.
+ * Displays a summary card for a hotel with details, amenities,
+ * available rooms count, and navigation links.
  *
  * @param {Object} props
  * @param {Object} props.hotel - Hotel data object
+ * @param {number} [props.availableRoomsCount] - Number of currently available rooms
  */
-const HotelCard = ({ hotel }) => {
+const HotelCard = ({ hotel, availableRoomsCount }) => {
   if (!hotel) return null;
 
   return (
@@ -25,7 +27,15 @@ const HotelCard = ({ hotel }) => {
           <span className="hotel-rating">★ {hotel.rating}</span>
         </div>
         <p className="hotel-location">📍 {hotel.location}</p>
+
+        {availableRoomsCount !== undefined && (
+          <p className={`hotel-available-rooms ${availableRoomsCount > 0 ? 'text-available' : 'text-booked'}`}>
+            🛏️ {availableRoomsCount > 0 ? `${availableRoomsCount} rooms available` : '0 rooms available'}
+          </p>
+        )}
+
         <p className="hotel-desc">{hotel.description}</p>
+
         {hotel.amenities && hotel.amenities.length > 0 && (
           <div className="hotel-amenities">
             {hotel.amenities.slice(0, 3).map((amenity, idx) => (
@@ -40,6 +50,7 @@ const HotelCard = ({ hotel }) => {
             )}
           </div>
         )}
+
         <div className="hotel-footer">
           <div>
             <span className="hotel-price">₹{hotel.price ?? hotel.pricePerNight}</span>

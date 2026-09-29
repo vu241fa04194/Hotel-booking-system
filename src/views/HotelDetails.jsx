@@ -6,12 +6,14 @@ import RoomCard from '../components/RoomCard';
 
 /**
  * HotelDetails View
- * Displays detailed information about a selected hotel and its available rooms.
+ * Displays detailed information about a selected hotel,
+ * available room counts, and room inventory with an "Available Rooms Only" filter.
  */
 const HotelDetails = () => {
   const { id } = useParams();
   const [hotel, setHotel] = useState(null);
   const [rooms, setRooms] = useState([]);
+  const [showAvailableOnly, setShowAvailableOnly] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -65,6 +67,16 @@ const HotelDetails = () => {
     );
   }
 
+  // Calculate live available rooms count for this hotel
+  const availableRoomsCount = rooms.filter(
+    (r) => r.status === 'available' || r.isAvailable === true
+  ).length;
+
+  // Filter rooms based on the "Show Available Rooms Only" toggle
+  const displayedRooms = showAvailableOnly
+    ? rooms.filter((r) => r.status === 'available' || r.isAvailable === true)
+    : rooms;
+
   return (
     <div>
       <div className="mb-1">
@@ -84,8 +96,15 @@ const HotelDetails = () => {
             <h1 className="hotel-title">{hotel.name}</h1>
             <span className="hotel-rating">★ {hotel.rating}</span>
           </div>
+
           <p className="hotel-location">📍 {hotel.location}</p>
+
+          <p className={`hotel-available-rooms ${availableRoomsCount > 0 ? 'text-available' : 'text-booked'}`}>
+            🛏️ {availableRoomsCount > 0 ? `${availableRoomsCount} rooms available` : '0 rooms available (Fully Booked)'}
+          </p>
+
           <p className="hotel-desc">{hotel.description}</p>
+
           <p className="hotel-price">
             Starting from ₹{hotel.price ?? hotel.pricePerNight} <span className="hotel-price-unit">/ night</span>
           </p>
@@ -105,16 +124,50 @@ const HotelDetails = () => {
         </div>
       </div>
 
-      <div className="page-header">
-        <h2 className="page-title">Available Rooms</h2>
-        <p className="page-subtitle">Choose the room type that best suits your stay.</p>
+      {/* Available Rooms Section with Filter Toggle */}
+      <div className="rooms-section-header">
+        <div>
+          <h2 className="page-title">Available Rooms</h2>
+          <p className="page-subtitle">
+            Showing {displayedRooms.length} of {rooms.length} total rooms ({availableRoomsCount} currently available)
+          </p>
+        </div>
+
+        <div className="rooms-filter-control">
+          <label className="available-toggle-label">
+            <input
+              type="checkbox"
+              className="available-toggle-checkbox"
+              checked={showAvailableOnly}
+              onChange={(e) => setShowAvailableOnly(e.target.checked)}
+            />
+            <span>Show Available Rooms Only</span>
+          </label>
+        </div>
       </div>
 
-      {rooms.length === 0 ? (
-        <p className="alert alert-info">No rooms listed for this hotel currently.</p>
+      {displayedRooms.length === 0 ? (
+        <div className="empty-state">
+          <div className="empty-state-icon">🛏️</div>
+          <h3 className="empty-state-title">No rooms match your filter</h3>
+          <p className="empty-state-text">
+            {showAvailableOnly
+              ? 'All rooms for this hotel are currently booked. Uncheck "Show Available Rooms Only" to view all room specifications.'
+              : 'No rooms listed for this hotel currently.'}
+          </p>
+          {showAvailableOnly && (
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => setShowAvailableOnly(false)}
+            >
+              Show All Rooms
+            </button>
+          )}
+        </div>
       ) : (
         <div className="room-grid">
-          {rooms.map((room) => (
+          {displayedRooms.map((room) => (
             <RoomCard key={room.id} room={room} hotelId={hotel.id} />
           ))}
         </div>

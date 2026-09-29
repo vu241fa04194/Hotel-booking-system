@@ -792,7 +792,9 @@
       "type": "Deluxe King Room",
       "price": 4500,
       "capacity": 2,
-      "isAvailable": true
+      "isAvailable": false,
+      "status": "booked",
+      "roomType": "Deluxe King Room"
     },
     {
       "id": "102",
@@ -801,79 +803,9 @@
       "type": "Executive Sea View Suite",
       "price": 7500,
       "capacity": 4,
-      "isAvailable": true
-    },
-    {
-      "id": "201",
-      "hotelId": "2",
-      "roomNumber": "O-201",
-      "type": "Beachfront Deluxe Suite",
-      "price": 3200,
-      "capacity": 2,
-      "isAvailable": true
-    },
-    {
-      "id": "202",
-      "hotelId": "2",
-      "roomNumber": "O-202",
-      "type": "Family Palm Villa",
-      "price": 6000,
-      "capacity": 5,
-      "isAvailable": true
-    },
-    {
-      "id": "301",
-      "hotelId": "3",
-      "roomNumber": "M-301",
-      "type": "Valley View Cottage",
-      "price": 2800,
-      "capacity": 3,
-      "isAvailable": true
-    },
-    {
-      "id": "302",
-      "hotelId": "3",
-      "roomNumber": "M-302",
-      "type": "Pine Luxury Penthouse",
-      "price": 4900,
-      "capacity": 4,
-      "isAvailable": true
-    },
-    {
-      "id": "401",
-      "hotelId": "4",
-      "roomNumber": "R-401",
-      "type": "Maharaja Royal Suite",
-      "price": 5200,
-      "capacity": 2,
-      "isAvailable": true
-    },
-    {
-      "id": "402",
-      "hotelId": "4",
-      "roomNumber": "R-402",
-      "type": "Heritage Palace Chamber",
-      "price": 8500,
-      "capacity": 4,
-      "isAvailable": true
-    },
-    {
-      "id": "501",
-      "hotelId": "5",
-      "roomNumber": "B-501",
-      "type": "Business Club Room",
-      "price": 3600,
-      "capacity": 2,
-      "isAvailable": true
-    },
-    {
-      "id": "502",
-      "hotelId": "5",
-      "roomNumber": "B-502",
-      "type": "Urban Studio Apartment",
-      "price": 5400,
-      "capacity": 3,
-      "isAvailable": true
+      "isAvailable": true,
+      "status": "available",
+      "roomType": "Executive Sea View Suite"
     },
     {
       "id": "103",
@@ -887,6 +819,28 @@
       "status": "available"
     },
     {
+      "id": "201",
+      "hotelId": "2",
+      "roomNumber": "O-201",
+      "type": "Beachfront Deluxe Suite",
+      "price": 3200,
+      "capacity": 2,
+      "isAvailable": false,
+      "status": "booked",
+      "roomType": "Beachfront Deluxe Suite"
+    },
+    {
+      "id": "202",
+      "hotelId": "2",
+      "roomNumber": "O-202",
+      "type": "Family Palm Villa",
+      "price": 6000,
+      "capacity": 5,
+      "isAvailable": true,
+      "status": "available",
+      "roomType": "Family Palm Villa"
+    },
+    {
       "id": "203",
       "hotelId": "2",
       "roomNumber": "O-203",
@@ -894,8 +848,30 @@
       "roomType": "Family Room",
       "price": 5120,
       "capacity": 4,
+      "isAvailable": false,
+      "status": "booked"
+    },
+    {
+      "id": "301",
+      "hotelId": "3",
+      "roomNumber": "M-301",
+      "type": "Valley View Cottage",
+      "price": 2800,
+      "capacity": 3,
       "isAvailable": true,
-      "status": "available"
+      "status": "available",
+      "roomType": "Valley View Cottage"
+    },
+    {
+      "id": "302",
+      "hotelId": "3",
+      "roomNumber": "M-302",
+      "type": "Pine Luxury Penthouse",
+      "price": 4900,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available",
+      "roomType": "Pine Luxury Penthouse"
     },
     {
       "id": "303",
@@ -905,8 +881,30 @@
       "roomType": "Family Room",
       "price": 4480,
       "capacity": 4,
+      "isAvailable": false,
+      "status": "booked"
+    },
+    {
+      "id": "401",
+      "hotelId": "4",
+      "roomNumber": "R-401",
+      "type": "Maharaja Royal Suite",
+      "price": 5200,
+      "capacity": 2,
       "isAvailable": true,
-      "status": "available"
+      "status": "available",
+      "roomType": "Maharaja Royal Suite"
+    },
+    {
+      "id": "402",
+      "hotelId": "4",
+      "roomNumber": "R-402",
+      "type": "Heritage Palace Chamber",
+      "price": 8500,
+      "capacity": 4,
+      "isAvailable": true,
+      "status": "available",
+      "roomType": "Heritage Palace Chamber"
     },
     {
       "id": "403",
@@ -916,8 +914,30 @@
       "roomType": "Family Room",
       "price": 8320,
       "capacity": 4,
+      "isAvailable": false,
+      "status": "booked"
+    },
+    {
+      "id": "501",
+      "hotelId": "5",
+      "roomNumber": "B-501",
+      "type": "Business Club Room",
+      "price": 3600,
+      "capacity": 2,
       "isAvailable": true,
-      "status": "available"
+      "status": "available",
+      "roomType": "Business Club Room"
+    },
+    {
+      "id": "502",
+      "hotelId": "5",
+      "roomNumber": "B-502",
+      "type": "Urban Studio Apartment",
+      "price": 5400,
+      "capacity": 3,
+      "isAvailable": false,
+      "status": "booked",
+      "roomType": "Urban Studio Apartment"
     },
     {
       "id": "503",
@@ -960,8 +980,8 @@
       "roomType": "Suite",
       "price": 10200,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "604",
@@ -1026,8 +1046,8 @@
       "roomType": "Suite",
       "price": 7350,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "610",
@@ -1059,8 +1079,8 @@
       "roomType": "Suite",
       "price": 6300,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "613",
@@ -1081,8 +1101,8 @@
       "roomType": "Deluxe",
       "price": 3800,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "615",
@@ -1092,8 +1112,8 @@
       "roomType": "Suite",
       "price": 5700,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "616",
@@ -1158,8 +1178,8 @@
       "roomType": "Suite",
       "price": 5100,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "622",
@@ -1224,8 +1244,8 @@
       "roomType": "Suite",
       "price": 5400,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "628",
@@ -1246,8 +1266,8 @@
       "roomType": "Deluxe",
       "price": 4400,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "630",
@@ -1257,8 +1277,8 @@
       "roomType": "Suite",
       "price": 6600,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "631",
@@ -1290,8 +1310,8 @@
       "roomType": "Suite",
       "price": 5850,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "634",
@@ -1356,8 +1376,8 @@
       "roomType": "Suite",
       "price": 4350,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "640",
@@ -1411,8 +1431,8 @@
       "roomType": "Deluxe",
       "price": 4300,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "645",
@@ -1422,8 +1442,8 @@
       "roomType": "Suite",
       "price": 6450,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "646",
@@ -1455,8 +1475,8 @@
       "roomType": "Suite",
       "price": 5700,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "649",
@@ -1488,8 +1508,8 @@
       "roomType": "Suite",
       "price": 3900,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "652",
@@ -1554,8 +1574,8 @@
       "roomType": "Suite",
       "price": 4650,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "658",
@@ -1576,8 +1596,8 @@
       "roomType": "Deluxe",
       "price": 2900,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "660",
@@ -1620,8 +1640,8 @@
       "roomType": "Suite",
       "price": 5550,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "664",
@@ -1653,8 +1673,8 @@
       "roomType": "Suite",
       "price": 4050,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "667",
@@ -1686,8 +1706,8 @@
       "roomType": "Suite",
       "price": 4500,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "670",
@@ -1741,8 +1761,8 @@
       "roomType": "Deluxe",
       "price": 4500,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "675",
@@ -1752,8 +1772,8 @@
       "roomType": "Suite",
       "price": 6750,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "676",
@@ -1818,8 +1838,8 @@
       "roomType": "Suite",
       "price": 7200,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "682",
@@ -1851,8 +1871,8 @@
       "roomType": "Suite",
       "price": 5400,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "685",
@@ -1884,8 +1904,8 @@
       "roomType": "Suite",
       "price": 6900,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "688",
@@ -1906,8 +1926,8 @@
       "roomType": "Deluxe",
       "price": 3200,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "690",
@@ -1950,8 +1970,8 @@
       "roomType": "Suite",
       "price": 17250,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "694",
@@ -2016,8 +2036,8 @@
       "roomType": "Suite",
       "price": 7800,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "700",
@@ -2049,8 +2069,8 @@
       "roomType": "Suite",
       "price": 7350,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "703",
@@ -2071,8 +2091,8 @@
       "roomType": "Deluxe",
       "price": 6400,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "705",
@@ -2082,8 +2102,8 @@
       "roomType": "Suite",
       "price": 9600,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "706",
@@ -2148,8 +2168,8 @@
       "roomType": "Suite",
       "price": 20700,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "712",
@@ -2214,8 +2234,8 @@
       "roomType": "Suite",
       "price": 24750,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "718",
@@ -2236,8 +2256,8 @@
       "roomType": "Deluxe",
       "price": 12400,
       "capacity": 2,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "720",
@@ -2247,8 +2267,8 @@
       "roomType": "Suite",
       "price": 18600,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     },
     {
       "id": "721",
@@ -2280,8 +2300,8 @@
       "roomType": "Suite",
       "price": 20250,
       "capacity": 4,
-      "isAvailable": true,
-      "status": "available"
+      "isAvailable": false,
+      "status": "booked"
     }
   ],
   "bookings": [

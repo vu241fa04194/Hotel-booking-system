@@ -44,9 +44,9 @@ const Booking = () => {
           roomService.getRoomById(roomId)
         ]);
 
-        const isRoomAvail = roomData.isAvailable ?? (roomData.status === 'available');
+        const isRoomAvail = roomData.status === 'available' || roomData.isAvailable === true;
         if (!isRoomAvail) {
-          setError('This room has already been booked. Please select an available room.');
+          setError('Sorry, this room is no longer available.');
         }
 
         setHotel(hotelData);
@@ -74,6 +74,14 @@ const Booking = () => {
         throw new ValidationException('All reservation fields are required.');
       }
 
+      // Check whether the room is currently available
+      const latestRoom = await roomService.getRoomById(roomId);
+      const isStillAvailable = latestRoom.status === 'available' || latestRoom.isAvailable === true;
+      if (!isStillAvailable) {
+        setRoom((prev) => ({ ...prev, status: 'booked', isAvailable: false }));
+        throw new ValidationException('Sorry, this room is no longer available.');
+      }
+
       const bookingPayload = {
         hotelId,
         hotelName: hotel?.name || 'Unknown Hotel',
@@ -91,8 +99,9 @@ const Booking = () => {
       // 1. Create booking in JSON Server
       const createdBooking = await bookingService.createBooking(bookingPayload);
 
-      // 2. Update room availability status to booked (isAvailable: false)
-      await roomService.updateRoomAvailability(roomId, false);
+      // 2. Change room status to "booked" and update state immediately
+      await roomService.updateRoomStatus(roomId, 'booked');
+      setRoom((prev) => ({ ...prev, status: 'booked', isAvailable: false }));
 
       // 3. Show booking confirmation
       setConfirmedBooking(createdBooking);
@@ -169,12 +178,16 @@ const Booking = () => {
     );
   }
 
-  if (error && (!hotel || !room || !room.isAvailable)) {
+  const isRoomBooked = room && room.status === 'booked' && !room.isAvailable;
+
+  if (error && (!hotel || !room || isRoomBooked)) {
     return (
-      <div>
-        <p className="alert alert-error">{error}</p>
-        <Link to="/" className="btn btn-secondary">
-          ← Back to Hotels
+      <div className="empty-state">
+        <div className="empty-state-icon">⚠️</div>
+        <h3 className="empty-state-title">Room Unavailable</h3>
+        <p className="empty-state-text">{error || 'Sorry, this room is no longer available.'}</p>
+        <Link to={hotelId ? `/hotel/${hotelId}` : '/'} className="btn btn-primary">
+          ← View Available Rooms
         </Link>
       </div>
     );
