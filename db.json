@@ -1,0 +1,84 @@
+{
+  "hotels": [
+    {
+      "id": "1",
+      "name": "Grand Palace Hotel",
+      "location": "Mumbai",
+      "rating": 4.8,
+      "pricePerNight": 4500,
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "description": "A luxury 5-star hotel in the heart of Mumbai featuring seaside views and world-class dining."
+    },
+    {
+      "id": "2",
+      "name": "Ocean View Resort",
+      "location": "Goa",
+      "rating": 4.6,
+      "pricePerNight": 3200,
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "description": "Beachfront resort with private cabanas, tropical gardens, and an infinity pool."
+    },
+    {
+      "id": "3",
+      "name": "Mountain Breeze Retreat",
+      "location": "Manali",
+      "rating": 4.7,
+      "pricePerNight": 2800,
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "description": "Cozy alpine resort surrounded by snow-capped peaks and pine forests."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "101",
+      "hotelId": "1",
+      "roomNumber": "G-101",
+      "type": "Deluxe King",
+      "price": 4500,
+      "capacity": 2,
+      "isAvailable": true
+    },
+    {
+      "id": "102",
+      "hotelId": "1",
+      "roomNumber": "G-102",
+      "type": "Executive Suite",
+      "price": 7500,
+      "capacity": 4,
+      "isAvailable": true
+    },
+    {
+      "id": "201",
+      "hotelId": "2",
+      "roomNumber": "O-201",
+      "type": "Sea View Suite",
+      "price": 3200,
+      "capacity": 2,
+      "isAvailable": true
+    },
+    {
+      "id": "301",
+      "hotelId": "3",
+      "roomNumber": "M-301",
+      "type": "Valley View Cottage",
+      "price": 2800,
+      "capacity": 3,
+      "isAvailable": true
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b1",
+      "hotelId": "1",
+      "hotelName": "Grand Palace Hotel",
+      "roomId": "101",
+      "roomType": "Deluxe King",
+      "guestName": "John Doe",
+      "guestEmail": "john@example.com",
+      "checkIn": "2026-10-05",
+      "checkOut": "2026-10-08",
+      "totalPrice": 13500,
+      "status": "Confirmed"
+    }
+  ]
+}
